@@ -7,7 +7,7 @@
   <version>01.00.00</version>
   <packaging>jar</packaging>
 
-  <name>boundary-plugin-process</name>
+  <name>boundary-plugin-windows-process</name>
 
   <organization>
     <name>Boundary, Inc.</name>
