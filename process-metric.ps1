@@ -28,19 +28,19 @@ while(1) {
 
   if ($cpu_enabled -eq "true") {
     $cpu = $process | Select-Object CPU
-    $text = 'WINDOWS_PROCESS_CPU' + ' ' + $cpu."CPU" + ' ' + $computername
+    $text = 'WINDOWS_PROCESS_CPU' + ' ' + $cpu."CPU" + ' ' + $computer
     echo $text
   }
 
   if ($vm_enabled -eq "true") {
     $vm = $process | Select-Object VM
-    $text = 'WINDOWS_PROCESS_VIRTUAL_MEMORY' + ' ' + $vm."VM" + ' ' + $computername
+    $text = 'WINDOWS_PROCESS_VIRTUAL_MEMORY' + ' ' + $vm."VM" + ' ' + $computer
     echo $text
   }
 
   if ($pm_enabled -eq "true") {
     $pm = $process | Select-Object PM
-    $text = 'WINDOWS_PROCESS_CPU_PAGED_MEMORY' + ' ' + $pm."PM" + ' ' + $computername
+    $text = 'WINDOWS_PROCESS_CPU_PAGED_MEMORY' + ' ' + $pm."PM" + ' ' + $computer
     echo $text
   }
 
