@@ -22,11 +22,13 @@ If($a -eq 5)
    '$a equals 5'
  }
 
+$computer = get-content env:computername
+
 while(1) {
   $value = Get-Process $process | Select-Object $type
 
   # $text = $metric + ' ' + $value.$type + ' ' + $env:computername
-  "WINDOWS_PROCESS_CPU $value WIN-3KRNA8HH62H"
+  "WINDOWS_PROCESS_CPU $value $computer"
   Start-Sleep -s 1
 }
 
