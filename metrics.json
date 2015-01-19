@@ -3,7 +3,7 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "",
+            "description": "Windows Process CPU",
             "displayName": "Windows Process CPU"
             "displayNameShort": "Windows Proc CPU",
             "isDisabled": 0,
