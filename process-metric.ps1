@@ -11,26 +11,39 @@
 # PS C:\Users\Mark\Documents\Scripts> powershell .\mrprocess.ps1 Id powershell my.metric.name
 # my.metric.name 4396
 #
-# powershell -NoLogo -NonInteractive -Command Set-ExecutionPolicy RemoteSigned; C:\\Users\\Administrator\\Documents\\process-metric.ps1 CPU powershell POWERSHELL_CPU
+# powershell -NoLogo -NonInteractive -Command Set-ExecutionPolicy RemoteSigned; C:\\Users\\Administrator\\Documents\\process-metric.ps1 powershell POWERSHELL_CPU
 
-$process=$args[1]
-$metric=($args[2] -Replace('\r',''))
-$type=$args[0]
+$process_name=$args[0]
+$poll=$args[1]
+$cpu_enabled=$args[2]
+$vm_enabled=$args[3]
+$pm_enabled=$args[4]
 
-If($a -eq 5)
- {
-   '$a equals 5'
- }
-
+# Get the name of the computer we are running on
 $computer = get-content env:computername
 
+# Loop collecting metrics
 while(1) {
-  $value = Get-Process $process | Select-Object CPU
+  $process = Get-Process $process_name
 
-  $text = 'WINDOWS_PROCESS_CPU' + ' ' + $value.$type + ' ' + $env:computername
-  echo $text
-  Start-Sleep -s 1
+  if ($cpu_enable) {
+    $cpu = $process | Select-Object CPU
+    $text = 'WINDOWS_PROCESS_CPU' + ' ' + $cpu."CPU" + ' ' + $computername
+    echo $text
+  }
+
+  if ($vm_enable) {
+    $vm = $process | Select-Object VM
+    $text = 'WINDOWS_PROCESS_VIRTUAL_MEMORY' + ' ' + $vm."VM" + ' ' + $computername
+    echo $text
+  }
+
+  if ($pm_enabled) {
+    $pm = $process | Select-Object PM
+    $text = 'WINDOWS_PROCESS_CPU_PAGED_MEMORY' + ' ' + $pm."PM" + ' ' + $computername
+    echo $text
+  }
+
+  Start-Sleep -s $pollInterval
 }
-
-#Add-Content  C:\Users\Administrator\Documents\process.txt $text
 

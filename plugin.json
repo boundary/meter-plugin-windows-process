@@ -1,6 +1,6 @@
 {
     "description": "Monitors Windows Process Metrics",
-    "command": "powershell -NoLogo -NonInteractive -Command Set-ExecutionPolicy RemoteSigned; .\\process-metric.ps1 CPU powershell",
+    "command": "powershell -NoLogo -NonInteractive -Command Set-ExecutionPolicy RemoteSigned; .\\process-metric.ps1 $(process) $(cpu) $(vm) $(pm) $(poll)",
     "metrics" : [
     "WINDOWS_PROCESS_CPU"
     ],
@@ -23,12 +23,28 @@
             "required": false
         },
         {
-            "title": "Memory",
-            "name": "memory",
-            "description": "Collect Process Memory",
+            "title": "Paged Memory",
+            "name": "page_memory",
+            "description": "Collect Process Paged Memory",
             "type" : "boolean",
             "default" : "true",
             "required": false
+        },
+        {
+            "title": "Virtual Memory",
+            "name": "virt_memory",
+            "description": "Collect Process Virtual Memory",
+            "type" : "boolean",
+            "default" : "true",
+            "required": false
+        },
+        {
+            "title": "Polling Interval (sec.)",
+            "name": "poll",
+            "description": "How often to collec process metrics. default 1 sec.",
+            "type": "string",
+            "default": "1",
+            "required": true
         }
     ]
 }

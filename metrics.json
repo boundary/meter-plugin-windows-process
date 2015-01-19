@@ -13,11 +13,21 @@
         {
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
-            "description": "Windows Process Memory",
-            "displayName": "Process Memory",
-            "displayNameShort": "Process Memory",
+            "description": "Windows Process Virtual Memory",
+            "displayName": "Process Virtual Memory",
+            "displayNameShort": "Proc Virt Memory",
             "isDisabled": 0,
-            "name": "WINDOWS_PROCESS_MEMORY",
+            "name": "WINDOWS_PROCESS_VIRTUAL_MEMORY",
+            "unit": "bytecount"
+        },
+        {
+            "defaultAggregate": "avg",
+            "defaultResolutionMS": 1000,
+            "description": "Windows Process Paged Memory",
+            "displayName": "Process Paged Memory",
+            "displayNameShort": "Proc Paged Memory",
+            "isDisabled": 0,
+            "name": "WINDOWS_PROCESS_PAGED_MEMORY",
             "unit": "bytecount"
         }
     ]
