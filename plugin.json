@@ -15,12 +15,20 @@
             "required": true
         },
         {
-            "title": "Process Metric",
-            "name": "metric",
-            "description": "Name of the metric to collect",
-            "type" : { "enum" : [["CPU", "CPU"], ["MEMORY", "memory"]] },
-            "default" : "CPU",
-            "required": true
+            "title": "CPU",
+            "name": "cpu",
+            "description": "Collect Process CPU",
+            "type": "boolean",
+            "default": true,
+            "required": false
+        },
+        {
+            "title": "Memory",
+            "name": "memory",
+            "description": "Collect Process Memory",
+            "type" : "boolean",
+            "default" : "true",
+            "required": false
         }
     ]
 }
