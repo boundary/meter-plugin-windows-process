@@ -1,6 +1,6 @@
 {
     "description": "Monitors Windows Process Metrics",
-    "command": "powershell -NoLogo -NonInteractive -Command Set-ExecutionPolicy RemoteSigned; .\\process-metric.ps1",
+    "command": "powershell -NoLogo -NonInteractive -Command Set-ExecutionPolicy RemoteSigned; .\\process-metric.ps1 CPU powershell",
     "metrics" : [
     "WINDOWS_PROCESS_CPU"
     ],
