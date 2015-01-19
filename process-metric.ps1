@@ -14,10 +14,10 @@
 # powershell -NoLogo -NonInteractive -Command Set-ExecutionPolicy RemoteSigned; C:\\Users\\Administrator\\Documents\\process-metric.ps1 powershell POWERSHELL_CPU
 
 $process_name=$args[0]
-$poll=$args[1]
-$cpu_enabled=$args[2]
-$vm_enabled=$args[3]
-$pm_enabled=$args[4]
+$cpu_enabled=$args[1]
+$vm_enabled=$args[2]
+$pm_enabled=$args[3]
+$poll=$args[4]
 
 # Get the name of the computer we are running on
 $computer = get-content env:computername
