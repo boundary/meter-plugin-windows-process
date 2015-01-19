@@ -23,13 +23,11 @@ If($a -eq 5)
  }
 
 while(1) {
-$value = Get-Process $process | Select-Object $type
+  $value = Get-Process $process | Select-Object $type
 
-
-# $text = $metric + ' ' + $value.$type + ' ' + $env:computername
-$text = "WINDOWS_PROCESS_CPU $value WIN-3KRNA8HH62H"
-echo $text
-Start-Sleep -s 1
+  # $text = $metric + ' ' + $value.$type + ' ' + $env:computername
+  "WINDOWS_PROCESS_CPU $value WIN-3KRNA8HH62H"
+  Start-Sleep -s 1
 }
 
 #Add-Content  C:\Users\Administrator\Documents\process.txt $text
