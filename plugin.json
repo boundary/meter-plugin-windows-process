@@ -2,7 +2,9 @@
     "description": "Monitors Windows Process Metrics",
     "command": "powershell -NoLogo -NonInteractive -Command Set-ExecutionPolicy RemoteSigned; .\\process-metric.ps1 $(process) $(cpu) $(vm) $(pm) $(poll)",
     "metrics" : [
-    "WINDOWS_PROCESS_CPU"
+    "WINDOWS_PROCESS_CPU",
+    "WINDOWS_PROCESS_VIRTUAL_MEMORY",
+    "WINDOWS_PROCESS_PAGED_MEMORY"
     ],
 
     "paramSchema": [
@@ -41,7 +43,7 @@
         {
             "title": "Polling Interval (sec.)",
             "name": "poll",
-            "description": "How often to collec process metrics. default 1 sec.",
+            "description": "How often to collect process metrics. default 1 sec.",
             "type": "string",
             "default": "1",
             "required": true

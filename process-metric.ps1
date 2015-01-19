@@ -44,6 +44,6 @@ while(1) {
     echo $text
   }
 
-  Start-Sleep -s $pollInterval
+  Start-Sleep -s $poll
 }
 
