@@ -28,10 +28,10 @@ while(1) {
 
   if ($cpu_enabled -eq "true") {
     $cpu = $process | Select-Object CPU
-    $text = 'WINDOWS_PROCESS_CPU' + ' ' + $cpu."CPU" + ' ' + $computer
+    $value =  $cpu."CPU"/100.0
+    $text = 'WINDOWS_PROCESS_CPU' + ' ' + $value + ' ' + $computer
     echo $text
   }
-
   if ($vm_enabled -eq "true") {
     $vm = $process | Select-Object VM
     $text = 'WINDOWS_PROCESS_VIRTUAL_MEMORY' + ' ' + $vm."VM" + ' ' + $computer
