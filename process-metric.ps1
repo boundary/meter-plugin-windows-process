@@ -26,13 +26,13 @@ $computer = get-content env:computername
 while(1) {
   $process = Get-Process $process_name
 
-  if ($cpu_enable -eq "true") {
+  if ($cpu_enabled -eq "true") {
     $cpu = $process | Select-Object CPU
     $text = 'WINDOWS_PROCESS_CPU' + ' ' + $cpu."CPU" + ' ' + $computername
     echo $text
   }
 
-  if ($vm_enable -eq "true") {
+  if ($vm_enabled -eq "true") {
     $vm = $process | Select-Object VM
     $text = 'WINDOWS_PROCESS_VIRTUAL_MEMORY' + ' ' + $vm."VM" + ' ' + $computername
     echo $text
