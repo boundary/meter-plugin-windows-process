@@ -28,7 +28,7 @@ while(1) {
   $value = Get-Process $process | Select-Object $type
 
   # $text = $metric + ' ' + $value.$type + ' ' + $env:computername
-  "WINDOWS_PROCESS_CPU $value $computer"
+  "WINDOWS_PROCESS_CPU $value.$type $computer"
   Start-Sleep -s 1
 }
 
