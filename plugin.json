@@ -5,6 +5,23 @@
     "WINDOWS_PROCESS_CPU"
     ],
 
-    "paramSchema": []
+    "paramSchema": [
+        {
+            "title": "Process Name",
+            "name": "process",
+            "description": "Name of the process to monitor",
+            "type": "string",
+            "default": "explorer",
+            "required": true
+        },
+        {
+            "title": "Process Metric",
+            "name": "metric",
+            "description": "Name of the metric to collect",
+            "type" : { "enum" : [["CPU", "CPU"], ["MEMORY", "memory"]] },
+            "default" : "CPU",
+            "required": true
+        }
+    ]
 }
 
