@@ -22,10 +22,12 @@ If($a -eq 5)
    '$a equals 5'
  }
 
+while(1) {
 $value = Get-Process $process | Select-Object $type
 
 # $text = $metric + ' ' + $value.$type + ' ' + $env:computername
-$text = 'PB_POWERSHELL_TEST 10 WIN-3KRNA8HH62H'
+$text = 'WINDOWS_PROCESS_CPU $value WIN-3KRNA8HH62H'
 echo $text
+}
 
-Add-Content  C:\Users\Administrator\Documents\process.txt $text
+#Add-Content  C:\Users\Administrator\Documents\process.txt $text
