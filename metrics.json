@@ -4,10 +4,11 @@
             "defaultAggregate": "avg",
             "defaultResolutionMS": 1000,
             "description": "Windows Process CPU",
-            "displayName": "Windows Process CPU"
+            "displayName": "Windows Process CPU",
             "displayNameShort": "Windows Proc CPU",
             "isDisabled": 0,
             "name": "WINDOWS_PROCESS_CPU",
             "unit": "percent"
         }
+    ]
 }
