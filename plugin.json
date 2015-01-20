@@ -1,6 +1,6 @@
 {
     "description": "Monitors Windows Process Metrics",
-    "command": "powershell -NoLogo -NonInteractive -Command Set-ExecutionPolicy RemoteSigned; .\\process-metric.ps1 $(process) $(cpu) $(virt_memory) $(page_memory) $(poll)",
+    "command": "powershell -NoLogo -NonInteractive -Command Set-ExecutionPolicy RemoteSigned; .\\process-metric.ps1 '$(process)' $(cpu) $(virt_memory) $(page_memory) $(poll)",
     "metrics" : [
     "WINDOWS_PROCESS_CPU",
     "WINDOWS_PROCESS_VIRTUAL_MEMORY",
