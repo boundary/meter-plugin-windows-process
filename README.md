@@ -1,5 +1,5 @@
-Boundary CouchDB Plugin
------------------------
+Boundary Windows Process Plugin
+-------------------------------
 
 **Awaiting Certification**
 
