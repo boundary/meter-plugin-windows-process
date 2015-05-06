@@ -1,34 +1,26 @@
 {
-    "result": [
-        {
-            "defaultAggregate": "avg",
-            "defaultResolutionMS": 1000,
-            "description": "Windows Process CPU",
-            "displayName": "Process CPU",
-            "displayNameShort": "Process CPU",
-            "isDisabled": 0,
-            "name": "WINDOWS_PROCESS_CPU",
-            "unit": "percent"
-        },
-        {
-            "defaultAggregate": "avg",
-            "defaultResolutionMS": 1000,
-            "description": "Windows Process Virtual Memory",
-            "displayName": "Process Virtual Memory",
-            "displayNameShort": "Proc Virt Memory",
-            "isDisabled": 0,
-            "name": "WINDOWS_PROCESS_VIRTUAL_MEMORY",
-            "unit": "bytecount"
-        },
-        {
-            "defaultAggregate": "avg",
-            "defaultResolutionMS": 1000,
-            "description": "Windows Process Paged Memory",
-            "displayName": "Process Paged Memory",
-            "displayNameShort": "Proc Paged Memory",
-            "isDisabled": 0,
-            "name": "WINDOWS_PROCESS_PAGED_MEMORY",
-            "unit": "bytecount"
-        }
-    ]
+  "WINDOWS_PROCESS_CPU": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "Windows Process CPU",
+    "displayName": "Process CPU",
+    "displayNameShort": "Process CPU",
+    "unit": "percent"
+  },
+  "WINDOWS_PROCESS_PAGED_MEMORY": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "Windows Process Paged Memory",
+    "displayName": "Process Paged Memory",
+    "displayNameShort": "Proc Paged Memory",
+    "unit": "bytecount"
+  },
+  "WINDOWS_PROCESS_VIRTUAL_MEMORY": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "Windows Process Virtual Memory",
+    "displayName": "Process Virtual Memory",
+    "displayNameShort": "Proc Virt Memory",
+    "unit": "bytecount"
+  }
 }
